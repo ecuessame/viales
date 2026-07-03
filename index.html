@@ -847,7 +847,7 @@
         const texto = t.replace(/\s+/g, ' ');
 
         let textoResumen = diccionario[idiomaActual].no_summary;
-        const matchResumen = texto.match(/((?:En el mes|Durante|In the month|During|Between the months|No m[êe]s de|Em ).{10,300}?(?:pacientes|atenciones|patients|attentions|attended|atendimentos)\.?)/i) 
+        const matchResumen = texto.match(/((?:En el mes|Durante|Entre los meses|In the month|During|Between the months|No m[êe]s de|Em ).{10,300}?(?:pacientes|atenciones|patients|attentions|attended|atendimentos)\.?)/i) 
                           || texto.match(/([A-Z][^\.]{10,200}(?:solicitudes|requests|solicitações)[^\.]{5,200}(?:pacientes|patients)\.)/i);
         if (matchResumen) { textoResumen = matchResumen[1]; }
         document.getElementById('txt-parrafo').innerText = textoResumen;
